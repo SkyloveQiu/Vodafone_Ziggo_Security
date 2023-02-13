@@ -1,0 +1,36 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.0.2'
+	id 'io.spring.dependency-management' version '1.1.0'
+}
+
+group = 'nl.vodafoneziggo'
+version = '0.0.1'
+sourceCompatibility = '19'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '3.0.2'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.jetbrains:annotations:23.0.0'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.security:spring-security-test'
+	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client:3.0.2'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-oauth2-resource-server', version: '3.0.2'
+	implementation group: 'org.keycloak', name: 'keycloak-spring-boot-starter', version: '20.0.3'
+	implementation group: 'org.keycloak', name: 'keycloak-admin-client', version: '20.0.3'
+	implementation group: 'org.keycloak.bom', name: 'keycloak-adapter-bom', version: '20.0.3', ext: 'pom'
+	implementation group: 'com.mashape.unirest', name: 'unirest-java', version: '1.4.9'
+	implementation group: 'org.springframework.security', name: 'spring-security-web', version: '6.0.1'
+	implementation group: "org.springframework.security", name: "spring-security-config"
+
+
+
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
