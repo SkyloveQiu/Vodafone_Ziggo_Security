@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  keycloak:
+    container_name: keycloak
+    image: quay.io/keycloak/keycloak:20.0.3
+    volumes:
+      - ./imports/realm-export.json:/opt/keycloak/imports/realm-export.json
+    environment:
+      KEYCLOAK_USER: admin
+      KEYCLOAK_PASSWORD: admin
+    command: "import --file /opt/keycloak/imports/realm-export.json & start-dev"
+    ports:
+      - "8080:8080"
+  echo-server:
+    container_name: echo-server
+    image: skylove/vodafoneziggo_security:latest
+    ports:
+      - "8081:8081"
+    depends_on:
+      keycloak:
+        condition: service_healthy
+    links:
+      - keycloak
+

@@ -1,0 +1,528 @@
+{
+	"info": {
+		"_postman_id": "8dfa7e5c-2d9d-4ca1-913e-d647f1c10d8a",
+		"name": "VodafoneZiggoSecurity",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4400298"
+	},
+	"item": [
+		{
+			"name": "test",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/realms/springboot/protocol/openid-connect/token?grant_type=password&client_it=test&username=test&password=123456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"realms",
+						"springboot",
+						"protocol",
+						"openid-connect",
+						"token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "password"
+						},
+						{
+							"key": "client_it",
+							"value": "test"
+						},
+						{
+							"key": "username",
+							"value": "test"
+						},
+						{
+							"key": "password",
+							"value": "123456"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "test",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "client_id",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/realms/springboot/protocol/openid-connect/token?grant_type=password&client_it=test&username=test&password=123456",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"realms",
+								"springboot",
+								"protocol",
+								"openid-connect",
+								"token"
+							],
+							"query": [
+								{
+									"key": "grant_type",
+									"value": "password"
+								},
+								{
+									"key": "client_it",
+									"value": "test"
+								},
+								{
+									"key": "username",
+									"value": "test"
+								},
+								{
+									"key": "password",
+									"value": "123456"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-store"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "KEYCLOAK_LOCALE=; Version=1; Comment=Expiring cookie; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Max-Age=0; Path=/realms/springboot/; HttpOnly"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "KC_RESTART=; Version=1; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Max-Age=0; Path=/realms/springboot/; HttpOnly"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "content-length",
+							"value": "2120"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"access_token\": \"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIzQmg1TjBuMkNjamtqUzNLdncxUEVRUHJWMGY2QllaRDk2ckcwVWVmTU1vIn0.eyJleHAiOjE2NzYzNjcwMDEsImlhdCI6MTY3NjM2NjcwMSwianRpIjoiY2EwZTY2MDAtNTg2Mi00NzA2LWI0ZjgtZmMwMDZiMDFiMjYyIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9zcHJpbmdib290IiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjEzMjY5OGQ0LWNmNzItNDlhOS1iMzE4LWMyOGJjOTkwY2RhNyIsInR5cCI6IkJlYXJlciIsImF6cCI6InRlc3QiLCJzZXNzaW9uX3N0YXRlIjoiYjMzYzRhNTEtMjU5OC00MzY3LWFmMTQtZDM0M2I2MjA5NDk0IiwiYWNyIjoiMSIsInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6ImVtYWlsIHByb2ZpbGUgdnpfdGVzdCIsInNpZCI6ImIzM2M0YTUxLTI1OTgtNDM2Ny1hZjE0LWQzNDNiNjIwOTQ5NCIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6IkphbmUgRG9lIiwicHJlZmVycmVkX3VzZXJuYW1lIjoidGVzdCIsImdpdmVuX25hbWUiOiJKYW5lIiwiZmFtaWx5X25hbWUiOiJEb2UiLCJlbWFpbCI6ImphbmUuZG9lQGJhZWxkdW5nLmNvbSJ9.CfiBtZ7ThnlewQ9LJ85WITUDqqExyTEEfe25osgqBZJYsMkY9jo5y-Lsr-w_1r8KoiWW1YhXS3JBRX9h-oOCNWsQsTsjQy6xZU1xSN1Axxmk3niQzYcf6pHy8jJIP0yapzER3hs138rw5IjsfIaUrxK1P4Q2qFRSQZuJfKn7BY1qcrU6OwklKx22ijQNb6bgmnkBRYre-JvDX3p8-Dw5BtD4lAo00-3ABBD8YnK0h7zGrmxshhtw44FpHqzTcNkHugF2GaMZZrtLd7bSj2Xkw-fDgvWSw3n9PnN3PEx9SX3sfUcgLkfg4CQBFJsAwCTHWLxV5nfmE8xGOpcwQJIbwQ\",\n    \"expires_in\": 300,\n    \"refresh_expires_in\": 1800,\n    \"refresh_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIyMjRkOTg2Mi01OTM2LTQxZGYtOTFjOC0wNjlmOWZhYjc0NzgifQ.eyJleHAiOjE2NzYzNjg1MDEsImlhdCI6MTY3NjM2NjcwMSwianRpIjoiZDk1NTA2NmItMjU4ZS00NmQyLWJhMGYtMWZkMDYyNzFmNDEyIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9zcHJpbmdib290IiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9zcHJpbmdib290Iiwic3ViIjoiMTMyNjk4ZDQtY2Y3Mi00OWE5LWIzMTgtYzI4YmM5OTBjZGE3IiwidHlwIjoiUmVmcmVzaCIsImF6cCI6InRlc3QiLCJzZXNzaW9uX3N0YXRlIjoiYjMzYzRhNTEtMjU5OC00MzY3LWFmMTQtZDM0M2I2MjA5NDk0Iiwic2NvcGUiOiJlbWFpbCBwcm9maWxlIHZ6X3Rlc3QiLCJzaWQiOiJiMzNjNGE1MS0yNTk4LTQzNjctYWYxNC1kMzQzYjYyMDk0OTQifQ.6lEf42Fboj4tCHOtC8lE5g-oihgP57uZIV2uTUw3cl0\",\n    \"token_type\": \"Bearer\",\n    \"not-before-policy\": 0,\n    \"session_state\": \"b33c4a51-2598-4367-af14-d343b6209494\",\n    \"scope\": \"email profile vz_test\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get_test",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8080/realms/springboot/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "vz_test",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "test",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "test",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "keycloak",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICItajJsR3gwN0Fib00zOUluU28tWXMyTXZyNVhfYU9PWU96X1NQN2NQam9JIn0.eyJleHAiOjE2NzYyMjkwODIsImlhdCI6MTY3NjIyODc4MiwianRpIjoiOWNjYTU5OWQtN2YxMC00NzA5LWE1MTctYmRlMGYzOTk0NDdiIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9zcHJpbmdib290IiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjBkYmNkMWQxLWE1NGMtNGU1NC04YzhmLWE0MmY0OTA3NGYyZCIsInR5cCI6IkJlYXJlciIsImF6cCI6InRlc3QiLCJzZXNzaW9uX3N0YXRlIjoiNzM4NDFkYWUtZjgxMi00MWJkLWI0NDMtMmFkYjgxNjM3YmIzIiwiYWNyIjoiMSIsInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIiwiZGVmYXVsdC1yb2xlcy1zcHJpbmdib290Il19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIHZ6X3Rlc3QiLCJzaWQiOiI3Mzg0MWRhZS1mODEyLTQxYmQtYjQ0My0yYWRiODE2MzdiYjMiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsInByZWZlcnJlZF91c2VybmFtZSI6InRlc3QiLCJnaXZlbl9uYW1lIjoiIiwiZmFtaWx5X25hbWUiOiIifQ.KQO4q8rg-gvIYxWcrq2te_jI42wYA58c14f4WIdN1v1OLN6LwyXbxLhFf0c_sJ8pVkWswyePHKqiH2Pt8COKAlehW-39TnKM5egpsZDC9e6gjx-LWHS_3J-q2O-FMCUdXM05Wbu3spqAau6w8doLoRY5Dh7xJ-zzJhFUlw_YGCTUPt5aOtrzlGdIdsyoFFddLpLa2van_1XSG4aiRqezJKxfT1DZHk95CC5Zq95FmQL170w3oQknnK3UhOLHSd1K-qt-yxwXHiq2wRqqWHbrbMYjYzxGntFK0H7f0NmB_P783-P26SjqpvMVCsRqmxB3VfRrSk45pIDIJumGhqEYMA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/test?input=test123",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"test"
+					],
+					"query": [
+						{
+							"key": "input",
+							"value": "test123"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get_test",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/test?input=test123",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"test"
+							],
+							"query": [
+								{
+									"key": "input",
+									"value": "test123"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "7"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Feb 2023 09:25:11 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "test123"
+				}
+			]
+		},
+		{
+			"name": "temp",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "scope",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8080/realms/springboot/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "test",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "test",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "keycloak",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICItajJsR3gwN0Fib00zOUluU28tWXMyTXZyNVhfYU9PWU96X1NQN2NQam9JIn0.eyJleHAiOjE2NzYyMzQ0MzQsImlhdCI6MTY3NjIzNDEzNCwianRpIjoiNTg0ODAyNGUtYzMyNC00ZWQ0LTliNDUtMWE2ZTE1NmNiN2QxIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9zcHJpbmdib290IiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjBkYmNkMWQxLWE1NGMtNGU1NC04YzhmLWE0MmY0OTA3NGYyZCIsInR5cCI6IkJlYXJlciIsImF6cCI6InRlc3QiLCJzZXNzaW9uX3N0YXRlIjoiYTA5Mzg4ZDktNTczMy00NzQ0LTg0MWUtYWE0NGEwOGZkNTFmIiwiYWNyIjoiMSIsInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIiwiZGVmYXVsdC1yb2xlcy1zcHJpbmdib290Il19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIHZ6X3Rlc3QiLCJzaWQiOiJhMDkzODhkOS01NzMzLTQ3NDQtODQxZS1hYTQ0YTA4ZmQ1MWYiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsInByZWZlcnJlZF91c2VybmFtZSI6InRlc3QiLCJnaXZlbl9uYW1lIjoiIiwiZmFtaWx5X25hbWUiOiIifQ.wRkts1lgygsnBLxUPbLdGvZaRZnZaRIKZ9_ejY9xKDt6-tkCB2_5UwQNvfiBoJhDkFt-EPtIHiNm-aet_vldKw3yDi3CWvukR6zDmfBhxHEYx2q5bt9dSOpItxGgmD4A8liRTiSiCDv5Fs650HOefAPWZ_M13ZHsAU6xnsX8blSnzXt-42tbvmO5XRfd_StWarfdgHXhLV9MSdkM9S_2frNmd5sPcG8YabnbrcvCrR-WEhMHilNjGDS6_s-bqrALS8LkKOfRZeZUTnaGVqGMKq7xRyL5DGzyDhzhoij1oQB-sNArBuy9s8XkUVwyGLynT9GnkfGovkGwO5prQt_aNg",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8081/test?input=test123",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"test"
+					],
+					"query": [
+						{
+							"key": "input",
+							"value": "test123"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "temp",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8081/test?input=test123",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"test"
+							],
+							"query": [
+								{
+									"key": "input",
+									"value": "test123"
+								}
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "WWW-Authenticate",
+							"value": "Bearer error=\"invalid_token\", error_description=\"An error occurred while attempting to decode the Jwt: Signed JWT rejected: Another algorithm expected, or no matching key(s) found\", error_uri=\"https://tools.ietf.org/html/rfc6750#section-3.1\""
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Feb 2023 09:25:15 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	]
+}

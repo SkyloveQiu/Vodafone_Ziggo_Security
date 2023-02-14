@@ -1,10 +1,8 @@
 package nl.vodafoneziggo.vodafoneziggo_security;
 
-import dasniko.testcontainers.keycloak.KeycloakContainer;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.DynamicPropertyRegistry;
-import org.springframework.test.context.DynamicPropertySource;
+
 
 import static io.restassured.RestAssured.given;
 
@@ -12,15 +10,31 @@ import static io.restassured.RestAssured.given;
 class VodafoneZiggoSecurityApplicationTests extends KeycloakTestContainers{
 
 	@Test
-	void givenAuthenticatedUser_whenGetMe_shouldReturnMyInfo() {
-
-		String body = given().header("Authorization", getJaneDoeBearer())
-				.when()
-				.get("/hello")
+	void testUnprotectedEntryPoint() {
+		given().get("/hello")
 				.then()
-				.toString();
-		System.out.println(body);
+				.toString()
+				.equals("This is an echo server");
+	}
 
+	@Test
+	void testProtectedEntryPoint(){
+		given().header("Authorization", getJaneDoeBearer())
+				.queryParam("input", "test123")
+				.when()
+				.get("/test")
+				.then()
+				.toString()
+				.equals("test123");
+	}
+
+	@Test
+	void testProtectedEntryPointWithoutAuthorization(){
+		given().queryParam("input", "test123")
+				.when()
+				.get("/test")
+				.then()
+				.statusCode(401);
 	}
 
 }
