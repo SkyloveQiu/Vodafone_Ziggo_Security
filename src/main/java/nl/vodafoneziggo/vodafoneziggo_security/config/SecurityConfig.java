@@ -40,6 +40,7 @@ class SecurityConfig {
     }
 
 
+    // give the correct permission.
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.oauth2Login();

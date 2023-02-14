@@ -10,11 +10,13 @@ import javax.ws.rs.BadRequestException;
 @RestController
 @EnableWebSecurity
 public class EchoController {
+    //The entry point which is not protected
     @GetMapping("/hello")
     public String home(String input) {
         return "This is an echo server";
     }
 
+    //protected entry point
     @GetMapping("/test")
     public String test(String input) {
         return input;
