@@ -12,7 +12,7 @@ import javax.ws.rs.BadRequestException;
 public class EchoController {
     @GetMapping("/hello")
     public String home(String input) {
-        return input;
+        return "This is an echo server";
     }
 
     @GetMapping("/test")
