@@ -3,13 +3,16 @@ version: "3.9"
 services:
   keycloak:
     container_name: keycloak
-    image: quay.io/keycloak/keycloak:20.0.3
+    image: quay.io/keycloak/keycloak:latest
     volumes:
       - ./imports/realm-export.json:/opt/keycloak/imports/realm-export.json
     environment:
       KEYCLOAK_USER: admin
       KEYCLOAK_PASSWORD: admin
-    command: "import --file /opt/keycloak/imports/realm-export.json & start-dev"
+      KC_HEALTH_ENABLED: true
+    profiles:
+      - start-dev
+    command: "import --file /opt/keycloak/imports/realm-export.json "
     ports:
       - "8080:8080"
   echo-server:
@@ -18,8 +21,7 @@ services:
     ports:
       - "8081:8081"
     depends_on:
-      keycloak:
-        condition: service_healthy
+      - keycloak
     links:
       - keycloak
 
